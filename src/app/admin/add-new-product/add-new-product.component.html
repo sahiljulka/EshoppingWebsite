@@ -1,0 +1,29 @@
+<div class="content">
+  <form class="example-form" ngForm  name="mainForm" #mainForm=ngForm (ngSubmit)="onSubmit(mainForm)">
+            <mat-form-field class="example-full-width flex-items">
+              <input required [(ngModel)]="product.title" name="title"  matInput placeholder="Title" #title=ngModel>
+            </mat-form-field>
+            <mat-form-field class="example-full-width  flex-items">
+              <input required [(ngModel)]="product.price" name="price" type="Number" matInput placeholder="Price" #price>
+            </mat-form-field>
+             <mat-select   [(ngModel)]="product.category" name="category" required [(value)]="selected" class="flex-items" placeholder=Category #category>
+                <mat-option *ngFor="let c of categories" [value]="c.key">
+                  {{c.value}}
+                </mat-option>
+             </mat-select>
+             <mat-form-field class="example-full-width  flex-items">
+              <input  required  [(ngModel)]="product.imageURL" name="imageURL" matInput placeholder="ImageURL" #url>
+            </mat-form-field>
+            <br>
+            <button class="globalColour" mat-raised-button	 type="submit"  id="signupButton" class="flex-items ">Add Product</button>
+            <button  class="globalColour" mat-raised-button	  (click)="deleteProduct()" *ngIf="productEditId" class="globalColour" id="deleteutton" class="flex-items">Delete Product</button>            
+ </form>
+ <br>
+  <mat-card *ngIf="product.imageURL">
+    <img  mat-card-image [src]="product.imageURL">  
+    <mat-card-title>{{product.title}}</mat-card-title>
+    <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
+    <mat-card-content>{{product.price|currency:'INR'}}</mat-card-content>
+  </mat-card>
+</div>
+<spinner [isSpin]="isVisible"></spinner>

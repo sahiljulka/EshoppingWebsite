@@ -1,0 +1,19 @@
+<mat-chip-list class="mat-chip-list-stacked left" >
+  <mat-chip *ngFor="let chip of categories" selected="true"  routerLink="/" [queryParams]="{category:chip.key}" >
+    {{chip.value}}
+  </mat-chip>
+</mat-chip-list>
+
+<!--<mat-list role="list">
+  <mat-list-item *ngFor="let chip of categories">{{chip.value}}</mat-list-item>
+</mat-list>-->
+  <div class="content">
+  <card
+    *ngFor="let p of products" 
+    [isClicked]="isDisabled" [quantity]="p.quantity" [title]="p.title" [subtitle]="p.price " [imageURL]="p.imageURL" (addToCart)="onAddToCart(p)"
+    (subtractFromCart)="onSubtractFromCart(p)"
+  >
+  </card>
+</div>
+
+<spinner [isSpin]="isVisible"></spinner>

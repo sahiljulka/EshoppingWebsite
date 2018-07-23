@@ -1,0 +1,35 @@
+.flex-container {
+  border: 2px solid black;
+  border-radius: 20px;
+  font-weight: bolder;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  justify-content: stretch;
+ 
+}
+#signupButton{
+  vertical-align: bottom;
+}
+
+/*input{
+  width: 100%;
+}*/
+
+
+.outer{
+  /*min-height: 92%;*/
+  height: 100%;
+  background-image: url("../assets/images/bg-shopping.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

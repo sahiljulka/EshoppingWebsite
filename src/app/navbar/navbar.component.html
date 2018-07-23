@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <span class="flex-items" routerLink="/">O My Shop</span>
+  <mat-chip>{{_cartService.nProducts}}</mat-chip>
+  <a routerLink="/Cart">
+    <i class="fa fa-cart-plus"></i>
+    <span>Cart</span>
+  </a>
+  <button mat-button *ngIf="!_signupService.isLoggedIn()"
+   routerLink="signup">Login/Signup</button>
+  <mat-select *ngIf="_signupService.isLoggedIn()"
+   class="flex-items" placeholder={{_signupService.CurrentUser().userName}}>
+    <mat-option routerLink="my-orders">My Orders</mat-option>
+    <mat-option >Manage Orders</mat-option>
+    <mat-option  *ngIf="_signupService.CurrentUser().isAdmin"  routerLink="admin/Products">Manage Products</mat-option>
+    <mat-option (click)="logout()">Logout</mat-option>    
+  </mat-select>
+</mat-toolbar>

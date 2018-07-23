@@ -1,0 +1,17 @@
+<mat-card class="card-cart">
+  <div class="left">
+    <img mat-card-image [src]="imageURL">
+    <div class="actions">
+        <button style="width:20%" [disabled]="isClicked"  (click)="onClick()">+</button>
+        <button style="width:30%" [disabled]="isClicked" >{{quantity}}</button>
+        <button style="width:20%" [disabled]="isClicked"  (click)="onSClick()">-</button>
+      <!-- <button>+</button>
+        <span>{{quantity}}</span>
+        <button>-</button> -->
+    </div>
+  </div>
+  <div class="right">
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-subtitle>{{price | currency:"₹":0}}</mat-card-subtitle>
+  </div>
+</mat-card>

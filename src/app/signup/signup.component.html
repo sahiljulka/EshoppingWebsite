@@ -1,0 +1,35 @@
+<div class="outer">
+ <mat-tab-group class="demo-tab-group flex-container">
+      <mat-tab label="Signup">
+          <form class="example-form" >
+            <mat-form-field class="example-full-width flex-items">
+              <input matInput placeholder="Email" #email>
+            </mat-form-field>
+            <mat-form-field class="example-full-width  flex-items">
+              <input type="password" matInput placeholder="Password" #password>
+            </mat-form-field>
+            <mat-form-field class="example-full-width  flex-items">
+              <input matInput placeholder="Name" #name>
+            </mat-form-field>
+            <!--<mat-button ">Signup</mat-button>-->
+            <button id="signupButton" class="flex-items " mat-raised-button	 (click)="onSubmit(email.value,password.value,name.value)">Signup</button> 
+          </form>
+          <!--</div>-->
+      </mat-tab>
+      <mat-tab label="Login">
+       <form class="example-form" >
+            <mat-form-field class="example-full-width flex-items">
+              <input matInput placeholder="Email" #email1>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width  flex-items">
+              <input type="password"  matInput placeholder="Password" #password1>
+            </mat-form-field>
+           
+            <!--<mat-button ">Signup</mat-button>-->
+            <button id="signupButton" class="flex-items " mat-raised-button	 (click)="onSubmitLogin(email1.value,password1.value)">Login</button> 
+          </form>
+      </mat-tab>
+  </mat-tab-group>
+ </div>
+<spinner [isSpin]="isVisible"></spinner>

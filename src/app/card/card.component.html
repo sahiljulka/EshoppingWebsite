@@ -1,0 +1,11 @@
+ <mat-card>
+    <img  mat-card-image [src]="imageURL">  
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-subtitle>{{subtitle|currency:'INR'}}</mat-card-subtitle>
+    <button *ngIf="quantity==0 || quantity==NULL"  [disabled]="isClicked" class="globalColour" mat-raised-button (click)="onClick()">Add To Cart</button>
+    <span *ngIf="quantity>0"  class="addCart">
+      <button class="globalColour"  [disabled]="isClicked" mat-raised-button (click)="onClick()">+</button>
+      <button class="globalColour"  [disabled]="isClicked" mat-raised-button>{{quantity}}</button>
+      <button class="globalColour"  [disabled]="isClicked" mat-raised-button (click)="onSClick()">-</button>
+    </span>
+  </mat-card>

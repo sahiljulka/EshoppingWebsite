@@ -1,0 +1,24 @@
+mat-card{
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px;
+    box-shadow: 15px 10px black;
+    height: 300px;
+}
+
+button{
+    vertical-align: bottom;
+}
+img{
+    border-radius:50px 50px 0px 0px;
+    height: 70%;
+}
+
+/*
+@media screen and (max-height:500px){
+    mat-card{
+        height: 150px;
+    }
+}*/

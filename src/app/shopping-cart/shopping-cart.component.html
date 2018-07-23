@@ -1,0 +1,8 @@
+<div class="content">
+  <h1 class="flex-items">Shopping cart</h1>
+  <h3 class="flex-items"> You have {{_cartService.nProducts}} items in your Shopping Cart</h3>
+  <app-cart-product *ngFor="let prod of cart.items" [title]="prod.product.title" [price]="prod.product.price" [imageURL]="prod.product.imageURL"
+    [quantity]="prod.quantity" [isClicked]="isClicked" (addToCart)="onAddToCart(prod.product)" (subtractFromCart)="onSubtractFromCart(prod.product)">
+  </app-cart-product>
+  <spinner [isSpin]="isVisible"></spinner>
+</div>

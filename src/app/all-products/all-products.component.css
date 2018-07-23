@@ -1,0 +1,45 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+card{
+    display: flex;
+    justify-content: center;
+    /*height: 45%;*/
+}
+
+mat-chip{
+    width:100%;
+    border: 1px solid black;
+}
+mat-chip-list{
+    float: left;
+    /*display: flex-inline;*/
+    /*flex-direction: column;
+    justify-content: flex-end;
+    height: 50%;*/
+    width: 10%;
+    position: absolute;
+    top:15%;
+    left:1.5%;
+
+}
+/*mat-grid-tile {
+  background: lightblue;
+}*/
+
+
+input{
+    height: 4%;
+    border-radius: 5px;
+    width:70%;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    margin:auto;
+}
+
+spinner{
+    z-index:10;
+}
